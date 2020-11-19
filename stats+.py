@@ -34,6 +34,7 @@ batters_alltime_advanced = os.path.expanduser("~/Downloads/batters_alltime_advan
 pitchers_alltime_standard = os.path.expanduser("~/Downloads/pitchers_alltime_standard.csv")
 pitchers_alltime_advanced = os.path.expanduser("~/Downloads/pitchers_alltime_advanced.csv")
 fielding_alltime = os.path.expanduser("~/Downloads/fielding_alltime.csv")
+\
 team_2019 = os.path.expanduser("~/Downloads/team_2019.csv")
 team_2020 = os.path.expanduser("~/Downloads/team_2020.csv")
 team_2021 = os.path.expanduser("~/Downloads/team_2021.csv")
@@ -42,7 +43,14 @@ team_2023 = os.path.expanduser("~/Downloads/team_2023.csv")
 team_2024 = os.path.expanduser("~/Downloads/team_2024.csv")
 team_2025 = os.path.expanduser("~/Downloads/team_2025.csv")
 
+finances_2019 = os.path.expanduser("~/Downloads/finances_2019.csv")
+finances_2020 = os.path.expanduser("~/Downloads/finances_2020.csv")
+finances_2021 = os.path.expanduser("~/Downloads/finances_2021.csv")
+finances_2022 = os.path.expanduser("~/Downloads/finances_2022.csv")
+finances_2023 = os.path.expanduser("~/Downloads/finances_2023.csv")
+finances_2024 = os.path.expanduser("~/Downloads/finances_2024.csv")
 finances_2025 = os.path.expanduser("~/Downloads/finances_2025.csv")
+finances_2026 = os.path.expanduser("~/Downloads/finances_2026.csv")
 
 team_record_current = os.path.expanduser("~/Downloads/team_record_current.csv")
 
@@ -122,8 +130,29 @@ if os.path.isfile(team_2024):
 if os.path.isfile(team_2025):
     os.remove(team_2025)
 
+if os.path.isfile(finances_2019):
+    os.remove(finances_2019)
+
+if os.path.isfile(finances_2020):
+    os.remove(finances_2020)
+
+if os.path.isfile(finances_2021):
+    os.remove(finances_2021)
+
+if os.path.isfile(finances_2022):
+    os.remove(finances_2022)
+
+if os.path.isfile(finances_2023):
+    os.remove(finances_2023)
+
+if os.path.isfile(finances_2024):
+    os.remove(finances_2024)
+
 if os.path.isfile(finances_2025):
     os.remove(finances_2025)
+
+if os.path.isfile(finances_2026):
+    os.remove(finances_2026)
 
 if os.path.isfile(team_record_current):
     os.remove(team_record_current)
@@ -132,7 +161,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2020")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2020.csv')
 
 except:
@@ -142,7 +171,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2021")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2021.csv')
 
 except:
@@ -152,7 +181,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2022")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2022.csv')
 
 except:
@@ -162,7 +191,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2023")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2023.csv')
 
 except:
@@ -172,7 +201,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2024")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2024.csv')
 
 except:
@@ -182,7 +211,7 @@ try:
     driver.get("https://statsplus.net/pbal/draftyear?year=2025")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2025.csv')
 
 except:
@@ -192,7 +221,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2019&endyear=2025&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_alltime_standard.csv')
 
 except:
@@ -202,7 +231,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2019&endyear=2019&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2019_standard.csv')
 
 except:
@@ -212,7 +241,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2020&endyear=2020&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2020_standard.csv')
 
 except:
@@ -222,7 +251,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2021&endyear=2021&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2021_standard.csv')
 
 except:
@@ -232,7 +261,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2022&endyear=2022&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2022_standard.csv')
 
 except:
@@ -242,7 +271,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2023&endyear=2023&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2023_standard.csv')
 
 except:
@@ -252,7 +281,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2024&endyear=2024&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2024_standard.csv')
 
 except:
@@ -262,7 +291,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2025&endyear=2025&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2025_standard.csv')
 
 except:
@@ -272,7 +301,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?stat=bat&team=All&pos=All&playerstatus=any&more=true&games=reg&rightleft=All&startyear=2019&endyear=2025&qual=Qual&sort=war,d&type=2")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_alltime_advanced.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/batters_alltime_advanced.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -287,7 +316,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?stat=pitch&team=All&pos=All&playerstatus=any&more=true&games=reg&rightleft=All&startyear=2019&endyear=2025&qual=Qual&sort=era,a&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/pitchers_alltime_standard.csv')
 
 except:
@@ -297,7 +326,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?stat=pitch&team=All&pos=All&playerstatus=any&more=true&games=reg&rightleft=All&startyear=2019&endyear=2025&qual=Qual&sort=war,d&type=2")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/pitchers_alltime_advanced.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/pitchers_alltime_advanced.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -314,7 +343,7 @@ try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=zr,d&stat=field&team=All&qual=Qual&pos=0&more=true&startyear=2019&endyear=2025&playerstatus=any&type=0")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/fielding_alltime.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/fielding_alltime.csv")
     new_df = df.rename(columns = {"F%": "FIELDING PCT", 
@@ -328,7 +357,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2019&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2019.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2019.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -342,7 +371,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2020&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2020.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2020.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -356,7 +385,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2021&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2021.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2021.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -370,7 +399,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2022&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2022.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2022.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -384,7 +413,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2023&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2023.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2023.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -398,7 +427,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2024&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2024.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2024.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -412,7 +441,7 @@ try:
     driver.get("https://statsplus.net/pbal/stats/batting?year=2025&split=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2025.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_2025.csv")
     new_df = df.rename(columns = {"BB%": "BB PCT", 
@@ -423,11 +452,81 @@ except:
     driver.quit()
 
 try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2019")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2019.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2020")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2020.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2021")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2021.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2022")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2022.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2023")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2023.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2024")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2024.csv')
+
+except:
+    driver.quit()
+
+try:
     driver.get("https://statsplus.net/pbal/finance/current?year=2025")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
-    time.sleep(5)
+    time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2025.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/finance/current?year=2026")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2026.csv')
 
 except:
     driver.quit()
@@ -439,7 +538,7 @@ try:
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_record_current.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/team_record_current.csv")
-    left = df['Team'].str[:3]
+    left = df['Team'].str[-3:]
     left = left.str.upper()
     final_df = [df, left]
     final_df = pd.concat(final_df, axis=1)
@@ -528,8 +627,29 @@ team_2024.to_sql('team_2024', engine, if_exists='replace')
 team_2025 = pd.read_csv('C:/Users/skale/Downloads/team_2025.csv', engine='python', index_col=False)
 team_2025.to_sql('team_2025', engine, if_exists='replace')
 
+finances_2019 = pd.read_csv('C:/Users/skale/Downloads/finances_2019.csv', engine='python', index_col=False)
+finances_2019.to_sql('finances_2019', engine, if_exists='replace')
+
+finances_2020 = pd.read_csv('C:/Users/skale/Downloads/finances_2020.csv', engine='python', index_col=False)
+finances_2020.to_sql('finances_2020', engine, if_exists='replace')
+
+finances_2021 = pd.read_csv('C:/Users/skale/Downloads/finances_2021.csv', engine='python', index_col=False)
+finances_2021.to_sql('finances_2021', engine, if_exists='replace')
+
+finances_2022 = pd.read_csv('C:/Users/skale/Downloads/finances_2022.csv', engine='python', index_col=False)
+finances_2022.to_sql('finances_2022', engine, if_exists='replace')
+
+finances_2023 = pd.read_csv('C:/Users/skale/Downloads/finances_2023.csv', engine='python', index_col=False)
+finances_2023.to_sql('finances_2023', engine, if_exists='replace')
+
+finances_2024 = pd.read_csv('C:/Users/skale/Downloads/finances_2024.csv', engine='python', index_col=False)
+finances_2024.to_sql('finances_2024', engine, if_exists='replace')
+
 finances_2025 = pd.read_csv('C:/Users/skale/Downloads/finances_2025.csv', engine='python', index_col=False)
 finances_2025.to_sql('finances_2025', engine, if_exists='replace')
+
+finances_2026 = pd.read_csv('C:/Users/skale/Downloads/finances_2026.csv', engine='python', index_col=False)
+finances_2026.to_sql('finances_2026', engine, if_exists='replace')
 
 team_record_current = pd.read_csv('C:/Users/skale/Downloads/team_record_current.csv', engine='python', index_col=False)
 team_record_current.to_sql('team_record_current', engine, if_exists='replace')
