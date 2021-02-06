@@ -20,6 +20,7 @@ download_file_2022 = os.path.expanduser("~/Downloads/draft_2022.csv")
 download_file_2023 = os.path.expanduser("~/Downloads/draft_2023.csv")
 download_file_2024 = os.path.expanduser("~/Downloads/draft_2024.csv")
 download_file_2025 = os.path.expanduser("~/Downloads/draft_2025.csv")
+download_file_2026 = os.path.expanduser("~/Downloads/draft_2026.csv")
 
 batters_alltime_standard = os.path.expanduser("~/Downloads/batters_alltime_standard.csv")
 batters_2019_standard = os.path.expanduser("~/Downloads/batters_2019_standard.csv")
@@ -29,12 +30,13 @@ batters_2022_standard = os.path.expanduser("~/Downloads/batters_2022_standard.cs
 batters_2023_standard = os.path.expanduser("~/Downloads/batters_2023_standard.csv")
 batters_2024_standard = os.path.expanduser("~/Downloads/batters_2024_standard.csv")
 batters_2025_standard = os.path.expanduser("~/Downloads/batters_2025_standard.csv")
+batters_2026_standard = os.path.expanduser("~/Downloads/batters_2026_standard.csv")
 
 batters_alltime_advanced = os.path.expanduser("~/Downloads/batters_alltime_advanced.csv")
 pitchers_alltime_standard = os.path.expanduser("~/Downloads/pitchers_alltime_standard.csv")
 pitchers_alltime_advanced = os.path.expanduser("~/Downloads/pitchers_alltime_advanced.csv")
 fielding_alltime = os.path.expanduser("~/Downloads/fielding_alltime.csv")
-\
+
 team_2019 = os.path.expanduser("~/Downloads/team_2019.csv")
 team_2020 = os.path.expanduser("~/Downloads/team_2020.csv")
 team_2021 = os.path.expanduser("~/Downloads/team_2021.csv")
@@ -42,6 +44,7 @@ team_2022 = os.path.expanduser("~/Downloads/team_2022.csv")
 team_2023 = os.path.expanduser("~/Downloads/team_2023.csv")
 team_2024 = os.path.expanduser("~/Downloads/team_2024.csv")
 team_2025 = os.path.expanduser("~/Downloads/team_2025.csv")
+team_2026 = os.path.expanduser("~/Downloads/team_2026.csv")
 
 finances_2019 = os.path.expanduser("~/Downloads/finances_2019.csv")
 finances_2020 = os.path.expanduser("~/Downloads/finances_2020.csv")
@@ -73,6 +76,9 @@ if os.path.isfile(download_file_2024):
 if os.path.isfile(download_file_2025):
     os.remove(download_file_2025)
 
+if os.path.isfile(download_file_2026):
+    os.remove(download_file_2026)
+
 if os.path.isfile(batters_alltime_standard):
     os.remove(batters_alltime_standard)
 
@@ -96,6 +102,9 @@ if os.path.isfile(batters_2024_standard):
 
 if os.path.isfile(batters_2025_standard):
     os.remove(batters_2025_standard)
+
+if os.path.isfile(batters_2026_standard):
+    os.remove(batters_2026_standard)
 
 if os.path.isfile(batters_alltime_advanced):
     os.remove(batters_alltime_advanced)
@@ -129,6 +138,9 @@ if os.path.isfile(team_2024):
 
 if os.path.isfile(team_2025):
     os.remove(team_2025)
+
+if os.path.isfile(team_2026):
+    os.remove(team_2026)
 
 if os.path.isfile(finances_2019):
     os.remove(finances_2019)
@@ -218,6 +230,16 @@ except:
     driver.quit()
 
 try:
+    driver.get("https://statsplus.net/pbal/draftyear?year=2026")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/draft_2026.csv')
+
+except:
+    driver.quit()
+
+try:
     driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2019&endyear=2025&rightleft=All&playerstatus=any&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
@@ -293,6 +315,16 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2025_standard.csv')
+
+except:
+    driver.quit()
+
+try:
+    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2026&endyear=2026&rightleft=All&playerstatus=any&type=1")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/batters_2026_standard.csv')
 
 except:
     driver.quit()
@@ -452,11 +484,28 @@ except:
     driver.quit()
 
 try:
+    driver.get("https://statsplus.net/pbal/stats/batting?year=2026&split=1")
+    button = driver.find_element_by_xpath('//button[text()="CSV"]')
+    button.click()
+    time.sleep(2)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/team_2026.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/team_2026.csv")
+    new_df = df.rename(columns = {"BB%": "BB PCT", 
+                                  "K%":"K PCT"})
+    new_df.to_csv('C:/Users/skale/Downloads/team_2026.csv', index=False)
+
+except:
+    driver.quit()
+
+try:
     driver.get("https://statsplus.net/pbal/finance/current?year=2019")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2019.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2019.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2019.csv', index=False)
 
 except:
     driver.quit()
@@ -567,6 +616,9 @@ draft_2024.to_sql('draft_2024', engine, if_exists='replace')
 draft_2025 = pd.read_csv('C:/Users/skale/Downloads/draft_2025.csv', engine='python', index_col=False)
 draft_2025.to_sql('draft_2025', engine, if_exists='replace')
 
+draft_2026 = pd.read_csv('C:/Users/skale/Downloads/draft_2026.csv', engine='python', index_col=False)
+draft_2026.to_sql('draft_2026', engine, if_exists='replace')
+
 missing_players = pd.read_csv('C:/Users/skale/Documents/PBA Stat Files/missing_players.csv', engine='python', index_col=False)
 missing_players.to_sql('missing_players', engine, if_exists='replace')
 
@@ -593,6 +645,9 @@ batters_2024_standard.to_sql('batters_2024_standard', engine, if_exists='replace
 
 batters_2025_standard = pd.read_csv('C:/Users/skale/Downloads/batters_2025_standard.csv', engine='python', index_col=False)
 batters_2025_standard.to_sql('batters_2025_standard', engine, if_exists='replace')
+
+batters_2026_standard = pd.read_csv('C:/Users/skale/Downloads/batters_2026_standard.csv', engine='python', index_col=False)
+batters_2026_standard.to_sql('batters_2026_standard', engine, if_exists='replace')
 
 batters_alltime_advanced = pd.read_csv('C:/Users/skale/Downloads/batters_alltime_advanced.csv', engine='python', index_col=False)
 batters_alltime_advanced.to_sql('batters_alltime_advanced', engine, if_exists='replace')
@@ -626,6 +681,9 @@ team_2024.to_sql('team_2024', engine, if_exists='replace')
 
 team_2025 = pd.read_csv('C:/Users/skale/Downloads/team_2025.csv', engine='python', index_col=False)
 team_2025.to_sql('team_2025', engine, if_exists='replace')
+
+team_2026 = pd.read_csv('C:/Users/skale/Downloads/team_2026.csv', engine='python', index_col=False)
+team_2026.to_sql('team_2026', engine, if_exists='replace')
 
 finances_2019 = pd.read_csv('C:/Users/skale/Downloads/finances_2019.csv', engine='python', index_col=False)
 finances_2019.to_sql('finances_2019', engine, if_exists='replace')
