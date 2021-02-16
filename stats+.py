@@ -516,6 +516,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2020.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2020.csv")
+    df = df["Team"].replace({"KCH": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2020.csv', index=False)
 
 except:
     driver.quit()
@@ -526,6 +529,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2021.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2021.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2021.csv', index=False)
 
 except:
     driver.quit()
@@ -536,6 +542,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2022.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2022.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2022.csv', index=False)
 
 except:
     driver.quit()
@@ -546,6 +555,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2023.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2023.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2023.csv', index=False)
 
 except:
     driver.quit()
@@ -556,6 +568,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2024.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2024.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2024.csv', index=False)
 
 except:
     driver.quit()
@@ -566,6 +581,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2025.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2025.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2025.csv', index=False)
 
 except:
     driver.quit()
@@ -576,6 +594,9 @@ try:
     button.click()
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2026.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2026.csv")
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df.to_csv('C:/Users/skale/Downloads/finances_2026.csv', index=False)
 
 except:
     driver.quit()
