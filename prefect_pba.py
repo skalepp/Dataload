@@ -1,37 +1,11 @@
-# from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.support.ui import WebDriverWait
-# import psycopg2
-# import pandas as pd 
-# from sqlalchemy import create_engine
-# import os
-# import time
-# import shutil
-# import prefect
-# from prefect.schedules import IntervalSchedule
-
-# Agent token - scpaQLadevRpYljp8VulMQ
-
-from prefect import task, Flow, Parameter
+import prefect
+from prefect import task, Flow
 
 @task
-def extract():
-    return [1, 2, 3]
+def hello_task():
+logger = prefect.context.get("logger")
+logger.info("Hello world!")
 
-
-@task
-def transform(x):
-    return [i * 10 for i in x]
-
-
-@task
-def load(y):
-    print("Received y: {}".format(y))
-
-
-with Flow("ETL") as flow:
-    e = extract()
-    t = transform(e)
-    l = load(t)
+flow = Flow("hello-flow", tasks=[hello_task])
 
 flow.run()
