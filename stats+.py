@@ -358,7 +358,11 @@ except:
     driver.quit()
 
 try:
+<<<<<<< HEAD
     driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2027&endyear=2027&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
+=======
+    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2027&endyear=2027&rightleft=All&playerstatus=any&type=1")
+>>>>>>> 6b04f26646caf74b8bd5e55e906e42d2fcba279f
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -660,7 +664,7 @@ try:
     time.sleep(2)
     os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2027.csv')
     df = pd.read_csv("C:/Users/skale/Downloads/finances_2027.csv")
-    #df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
     df.to_csv('C:/Users/skale/Downloads/finances_2027.csv', index=False)
 
 except:
