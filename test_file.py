@@ -15,19 +15,19 @@ PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 
 try:
-    driver.get("https://statsplus.net/pbal/finance/current?year=2026")
+    driver.get("https://statsplus.net/pbal/finance/current?year=2019")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
-    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2026.csv')
-    df = pd.read_csv("C:/Users/skale/Downloads/finances_2026.csv")
-    #df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
-    df.to_csv('C:/Users/skale/Downloads/finances_2026.csv', index=False)
+    os.rename('C:/Users/skale/Downloads/statsplus.csv', 'C:/Users/skale/Downloads/finances_2019.csv')
+    df = pd.read_csv("C:/Users/skale/Downloads/finances_2019.csv")
+    new_df = df["Team"].replace({"ABQ": "MIL", "OTT": "COL", "SAN":"WPG"}, inplace=True)
+    new_df.to_csv('C:/Users/skale/Downloads/finances_2019.csv', index=False)
 
 except:
     driver.quit()
 
-finances_2026 = pd.read_csv('C:/Users/skale/Downloads/finances_2026.csv', engine='python', index_col=False)
-finances_2026.to_sql('finances_2026', engine, if_exists='replace')
+finances_2019 = pd.read_csv('C:/Users/skale/Downloads/finances_2019.csv', engine='python', index_col=False)
+finances_2019.to_sql('finances_2019', engine, if_exists='replace')
 
 driver.quit()

@@ -278,7 +278,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2019&endyear=2019&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2019&endyear=2019&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -288,7 +288,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2020&endyear=2020&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2020&endyear=2020&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -298,7 +298,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2021&endyear=2021&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2021&endyear=2021&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -308,7 +308,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2022&endyear=2022&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2022&endyear=2022&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -318,7 +318,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2023&endyear=2023&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2023&endyear=2023&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -328,7 +328,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2024&endyear=2024&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2024&endyear=2024&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -338,7 +338,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2025&endyear=2025&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2025&endyear=2025&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -348,7 +348,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2026&endyear=2026&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2026&endyear=2026&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
@@ -358,7 +358,7 @@ except:
     driver.quit()
 
 try:
-    driver.get("https://statsplus.net/pbal/playerstats?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&more=true&games=reg&startyear=2027&endyear=2027&rightleft=All&playerstatus=any&type=1")
+    driver.get("https://statsplus.net/pbal/playerstats/?sort=pa,d&stat=bat&team=All&qual=Qual&pos=All&records=100&more=true&games=reg&startyear=2027&endyear=2027&rightleft=All&playerstatus=any&timespan=yrs&startdate=2028-04-03&enddate=2028-04-03&type=1")
     button = driver.find_element_by_xpath('//button[text()="CSV"]')
     button.click()
     time.sleep(2)
