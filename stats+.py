@@ -7,11 +7,13 @@ from sqlalchemy import create_engine
 import os
 import time
 import shutil
-from prefect import task
+##from prefect import task
 
 engine = create_engine('postgresql://postgres:baseball@localhost:5432/postgres')
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"
+options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(PATH)
 
 download_file_2020 = os.path.expanduser("~/Downloads/draft_2020.csv")
